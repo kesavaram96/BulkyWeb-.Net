@@ -1,5 +1,6 @@
-﻿using BulkyWeb.Data;
-using BulkyWeb.Models;
+﻿
+using Bulky.DataAcess.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -35,6 +36,8 @@ namespace BulkyWeb.Controllers
                 _context.SaveChanges();
                 TempData["sucess"] = "Added Sucessfully";
                 return RedirectToAction("Index");
+
+
             }
             return View();
 
